@@ -13,6 +13,7 @@ router.post("/celinemarketing", reqController.celineMatketing);
 router.post("/hleads", reqController.hellleads);
 router.post("/tssuccess", reqController.tssuccess);
 router.post("/vikteam", reqController.vikteam);
+router.post("/franklin", reqController.franklin);
 
 module.exports = {
   router,

@@ -4,13 +4,20 @@ const { postDataToCrmGlc } = require("./requests/glc.js");
 const { postDataToCrmHellLeads } = require("./requests/hellLeads.js");
 const { postDataToCrmTssuccess } = require("./requests/tsSuccess.js");
 const { postDataToCRMVikTeam } = require("./requests/vikTeam.js");
-const {
-  postDataToCrmСelineMarketing,
-} = require("./requests/сelineMarketing.js");
+const {postDataToCrmСelineMarketing} = require("./requests/сelineMarketing.js");
+const {postDataToCrmFranklin} = require("./requests/franklin.js");
 class postController {
   async glc(req, res) {
     try {
       const response = await postDataToCrmGlc(req.body);
+      console.log(response);
+      res.json(response.data);
+    } catch (error) {
+      res.status(500).json(error);
+    }
+  } async franklin(req, res) {
+    try {
+      const response = await postDataToCrmFranklin(req.body);
       console.log(response);
       res.json(response.data);
     } catch (error) {
