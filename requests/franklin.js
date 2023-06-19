@@ -13,7 +13,7 @@ const postDataToCrmFranklin = (d) => {
     phone: d.phone,
     so: d.land,
     sub: "FreeParam",
-    MPC_1: d.answer,
+    MPC_1: d.id,
     MPC_2: "FreeParam",
     MPC_3: "FreeParam",
     MPC_4: "FreeParam",
