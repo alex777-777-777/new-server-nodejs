@@ -7,6 +7,7 @@ const { postDataToCRMVikTeam } = require("./requests/vikTeam.js");
 const {postDataToCrmСelineMarketing} = require("./requests/сelineMarketing.js");
 const {postDataToCrmFranklin} = require("./requests/franklin.js");
 const {postDataToCrmMccraft } = require("./requests/mccraft.js");
+const {postDataToCrmMccraftNight } = require("./requests/mccraftnight.js");
 class postController {
   async glc(req, res) {
     try {
@@ -27,6 +28,15 @@ class postController {
   } async mccraft(req, res) {
     try {
       const response = await postDataToCrmMccraft(req.body);
+      console.log(response);
+      res.json(response.data);
+    } catch (error) {
+      res.status(500).json(error);
+    }
+  }
+  } async mccraftnight(req, res) {
+    try {
+      const response = await postDataToCrmMccraftNight(req.body);
       console.log(response);
       res.json(response.data);
     } catch (error) {
