@@ -33,7 +33,7 @@ class postController {
     } catch (error) {
       res.status(500).json(error);
     }
-  }
+  
   } async mccraftnight(req, res) {
     try {
       const response = await postDataToCrmMccraftNight(req.body);
