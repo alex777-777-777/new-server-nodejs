@@ -15,6 +15,7 @@ router.post("/tssuccess", reqController.tssuccess);
 router.post("/vikteam", reqController.vikteam);
 router.post("/franklin", reqController.franklin);
 router.post("/mccraft", reqController.mccraft);
+router.post("/mccraftnight", reqController.mccraft);
 
 module.exports = {
   router,
