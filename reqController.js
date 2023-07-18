@@ -4,11 +4,13 @@ const { postDataToCrmGlc } = require("./requests/glc.js");
 const { postDataToCrmHellLeads } = require("./requests/hellLeads.js");
 const { postDataToCrmTssuccess } = require("./requests/tsSuccess.js");
 const { postDataToCRMVikTeam } = require("./requests/vikTeam.js");
-const {postDataToCrmСelineMarketing} = require("./requests/сelineMarketing.js");
-const {postDataToCrmFranklin} = require("./requests/franklin.js");
-const {postDataToCrmMccraft } = require("./requests/mccraft.js");
-const {postDataToCrmMccraftNight } = require("./requests/mccraftnight.js");
-const {postDataToCrmPafnet} = require("./requests/pafnet.js");
+const {
+  postDataToCrmСelineMarketing,
+} = require("./requests/сelineMarketing.js");
+const { postDataToCrmFranklin } = require("./requests/franklin.js");
+const { postDataToCrmMccraft } = require("./requests/mccraft.js");
+const { postDataToCrmMccraftNight } = require("./requests/mccraftnight.js");
+const { postDataToCrmPafnet } = require("./requests/pafnet.js");
 class postController {
   async glc(req, res) {
     try {
@@ -18,7 +20,8 @@ class postController {
     } catch (error) {
       res.status(500).json(error);
     }
-      async pafnet(req, res) {
+  }
+  async pafnet(req, res) {
     try {
       const response = await postDataToCrmPafnet(req.body);
       console.log(response);
@@ -26,7 +29,8 @@ class postController {
     } catch (error) {
       res.status(500).json(error);
     }
-  } async franklin(req, res) {
+  }
+  async franklin(req, res) {
     try {
       const response = await postDataToCrmFranklin(req.body);
       console.log(response);
@@ -34,7 +38,8 @@ class postController {
     } catch (error) {
       res.status(500).json(error);
     }
-  } async mccraft(req, res) {
+  }
+  async mccraft(req, res) {
     try {
       const response = await postDataToCrmMccraft(req.body);
       console.log(response);
@@ -42,8 +47,8 @@ class postController {
     } catch (error) {
       res.status(500).json(error);
     }
-  
-  } async mccraftnight(req, res) {
+  }
+  async mccraftnight(req, res) {
     try {
       const response = await postDataToCrmMccraftNight(req.body);
       console.log(response);
