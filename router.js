@@ -17,6 +17,7 @@ router.post("/franklin", reqController.franklin);
 router.post("/mccraft", reqController.mccraft);
 router.post("/mccraftnight", reqController.mccraft);
 router.post("/pafnet", reqController.pafnet);
+router.post("/focusFox", reqController.focusFox);
 
 module.exports = {
   router,
