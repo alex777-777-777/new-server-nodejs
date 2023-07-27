@@ -24,7 +24,7 @@ class postController {
   }
     async focusFox(req, res) {
     try {
-      const response = await postDataToCrmGlc(req.body);
+      const response = await postDataToCRMFocusFox(req.body);
       console.log(response);
       res.json(response.data);
     } catch (error) {
