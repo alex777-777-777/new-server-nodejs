@@ -7,7 +7,7 @@ const postDataToCRMFocusFox = (d) => {
     offer: d.offerId,
     ip: d.ip,
     name: d.name,
-    last: d.name,
+    last: d.last,
     phone: d.phone,
     email: d.email,
     country: d.geo,
