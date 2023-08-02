@@ -4,6 +4,7 @@
   "description": "",
   "main": "server.js",
   "type": "commonjs",
+  "engines": { "node": "17.3.0"},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server",
