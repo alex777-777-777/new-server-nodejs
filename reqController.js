@@ -4,6 +4,7 @@ const { postDataToCrmGlc } = require("./requests/glc.js");
 const { postDataToCrmHellLeads } = require("./requests/hellLeads.js");
 const { postDataToCrmTssuccess } = require("./requests/tsSuccess.js");
 const { postDataToCRMVikTeam } = require("./requests/vikTeam.js");
+const { postDataToCrmWinex } = require("./requests/winex.js");
 const {
   postDataToCrmСelineMarketing,
 } = require("./requests/сelineMarketing.js");
@@ -16,6 +17,15 @@ class postController {
   async glc(req, res) {
     try {
       const response = await postDataToCrmGlc(req.body);
+      console.log(response);
+      res.json(response.data);
+    } catch (error) {
+      res.status(500).json(error);
+    }
+  }
+  async winex(req, res) {
+    try {
+      const response = await postDataToCrmWinex(req.body);
       console.log(response);
       res.json(response.data);
     } catch (error) {
