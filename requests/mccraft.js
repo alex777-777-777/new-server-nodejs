@@ -7,7 +7,7 @@ const postDataToCrmMccraft = (d) => {
     gi: d.gi,
     userip: d.ip,
     firstname: d.name,
-    lastname: d.name,
+    lastname: d.sName,
     email: d.email,
     password: "X1TQok562",
     phone: d.phone,
