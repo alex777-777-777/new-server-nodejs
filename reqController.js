@@ -13,10 +13,20 @@ const { postDataToCrmMccraft } = require("./requests/mccraft.js");
 const { postDataToCrmMccraftNight } = require("./requests/mccraftnight.js");
 const { postDataToCrmPafnet } = require("./requests/pafnet.js");
 const { postDataToCRMFocusFox } = require("./requests/focusFox.js");
+const { postDataToCRMYAD } = require("./requests/yad.js");
 class postController {
   async glc(req, res) {
     try {
       const response = await postDataToCrmGlc(req.body);
+      console.log(response);
+      res.json(response.data);
+    } catch (error) {
+      res.status(500).json(error);
+    }
+  }
+  async yad(req, res) {
+    try {
+      const response = await postDataToCRMYAD(req.body);
       console.log(response);
       res.json(response.data);
     } catch (error) {
