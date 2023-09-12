@@ -20,6 +20,7 @@ router.post("/mccraftnight", reqController.mccraft);
 router.post("/pafnet", reqController.pafnet);
 router.post("/focusFox", reqController.focusFox);
 router.post("/yad", reqController.yad);
+router.post("/lm", reqController.LM);
 
 module.exports = {
   router,
