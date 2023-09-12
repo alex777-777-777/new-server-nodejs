@@ -27,7 +27,7 @@ class postController {
   }
    async LM(req, res) {
     try {
-      const response = await postDataToCrmGlc(req.body);
+      const response = await postDataToCrmLM(req.body);
       console.log(response);
       res.json(response.data);
     } catch (error) {
