@@ -15,10 +15,20 @@ const { postDataToCrmPafnet } = require("./requests/pafnet.js");
 const { postDataToCRMFocusFox } = require("./requests/focusFox.js");
 const { postDataToCRMYAD } = require("./requests/yad.js");
 const { postDataToCrmLM  } = require("./requests/LM.js");
+const { postDataToCrmNova  } = require("./requests/nova.js");
 class postController {
   async glc(req, res) {
     try {
       const response = await postDataToCrmGlc(req.body);
+      console.log(response);
+      res.json(response.data);
+    } catch (error) {
+      res.status(500).json(error);
+    }
+  }
+  async nova(req, res) {
+    try {
+      const response = await postDataToCrmNova(req.body);
       console.log(response);
       res.json(response.data);
     } catch (error) {
