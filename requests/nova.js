@@ -7,7 +7,7 @@ const postDataToCrmNova = (d) => {
     marker: d.marker,
     country: d.geo,
     lang: d.lang,
-    email: d.mail,
+    email: d.email,
     phone: d.phone,
     domain: d.domain,
     sourcetype: d.source,
