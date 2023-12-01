@@ -8,6 +8,7 @@ router.get("/", (req, res) => {
 });
 router.post("/glc", reqController.glc);
 router.post("/winex", reqController.winex);
+router.post("/nova", reqController.nova);
 router.post("/adscobar", reqController.adscobar);
 router.post("/coinvista", reqController.coinvista);
 router.post("/celinemarketing", reqController.celineMatketing);
