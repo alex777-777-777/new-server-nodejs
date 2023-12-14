@@ -12,6 +12,9 @@ const postDataToCrmNova = (d) => {
     domain: d.domain,
     sourcetype: d.source,
     offer: d.offer,
+    sub_id_1: d.summ,
+    sub_id_2: d.brok,
+    sub_id_3: d.losDate,
   };
 
    const requestOptions = {
