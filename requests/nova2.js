@@ -1,5 +1,5 @@
 const axios = require("axios");
-const postDataToCrmNova = (d) => {
+const postDataToCrmNova2 = (d) => {
   const data = {
     ip: d.ip,
     firstName: d.name,
@@ -28,4 +28,4 @@ const postDataToCrmNova = (d) => {
     .then((res) => res)
     .catch((err) => err);
 };
-module.exports = {postDataToCrmNova};
+module.exports = {postDataToCrmNova2};
